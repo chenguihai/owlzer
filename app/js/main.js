@@ -1,10 +1,8 @@
 var M = document.getElementById('M'),
   owlzerOBj = {
-      // urlLogin: 'https://api.owlzer.com:18091',
       // urlLogin: 'https://192.168.3.12:18091',
       urlLogin: 'http://192.168.3.12:18090',
       url: 'http://192.168.3.12:18090',
-      // url: 'http://api.owlzer.com:18090',
       G_DDP_SEESION_CHECK: 30 * 60 * 1000,
       API: new SendAPI(),
       UTILE: new UtileObj(),
