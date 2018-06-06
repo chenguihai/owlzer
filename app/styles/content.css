@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 300;
+  src: url("../fonts/Gotham-Light-0ea2a6e95d0bdba20a9502c62c131eeb.eot");
+  src: url("../fonts/Gotham-Light-0ea2a6e95d0bdba20a9502c62c131eeb.eot?#iefix") format('embedded-opentype'),
+  url("../fonts/Gotham-Light-999959dfbf09ebef3177fc72b803b717.woff") format('woff'),
+  url("../fonts/Gotham-Light-56ab3b42c80e9883a06fc73d5108449e.ttf") format('truetype'),
+  url("../fonts/Gotham-Medium-9560bad501344775ac5a19fed17cecad.svg#GothamMedium") format('svg')
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 400;
+  src: url("../fonts/Gotham-Book-4d092e28e42c81b1bdebcd4010abe604.eot");
+  src: url("../fonts/Gotham-Book-4d092e28e42c81b1bdebcd4010abe604.eot?#iefix") format('embedded-opentype'),
+  url("../fonts/Gotham-Book-62d503d5b97d5609337d4b4ed789302a.woff") format('woff'),
+  url("../fonts/Gotham-Book-f8208691ced4c70ed930ac679ca283bd.ttf") format('truetype'),
+  url("../fonts/Gotham-Medium-9560bad501344775ac5a19fed17cecad.svg#GothamMedium") format('svg')
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 500;
+  src: url("../fonts/Gotham-Medium-c0fb8cad2da798f8b27d0fe7336c0443.eot");
+  src: url("../fonts/Gotham-Medium-c0fb8cad2da798f8b27d0fe7336c0443.eot?#iefix") format('embedded-opentype'), url("../fonts/Gotham-Medium-6709db65d2a7a2fe5dc803c68cb53b38.woff") format('woff'),
+  url("../fonts/Gotham-Medium-7096870c6c466162c6728fe35c6990a3.ttf") format('truetype'),
+  url("../fonts/Gotham-Medium-9560bad501344775ac5a19fed17cecad.svg#GothamMedium") format('svg')
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 700;
+  src: url("../fonts/Gotham-Bold-594f4d55fcf020aaaa4c040cc58b7ef7.eot");
+  src: url("../fonts/Gotham-Bold-594f4d55fcf020aaaa4c040cc58b7ef7.eot?#iefix") format('embedded-opentype'),
+  url("../fonts/Gotham-Bold-ef012e01b1d16f8bbb7d7d24b62c11e2.woff") format('woff'),
+  url("../fonts/Gotham-Bold-de5f691c2611560246ca3a582086b7c3.ttf") format('truetype'),
+  url("../fonts/Gotham-Ultra-dc185c2f7205f724a150be6d3edc15cb.svg#GothamUltra") format('svg')
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 800;
+  src: url("../fonts/Gotham-Ultra-47e08737894486f61fbb1e4d9f2350a9.eot");
+  src: url("../fonts/Gotham-Ultra-47e08737894486f61fbb1e4d9f2350a9.eot?#iefix") format('embedded-opentype'),
+  url("../fonts/Gotham-Ultra-5fa75387fb02f8654ab75ee2b4f88581.woff") format('woff'),
+  url("../fonts/Gotham-Ultra-e5656a08edb3b900f18994c9a5cb2ca9.ttf") format('truetype'),
+  url("../fonts/Gotham-Ultra-dc185c2f7205f724a150be6d3edc15cb.svg#GothamUltra") format('svg')
+}
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gotham", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif !important;
+  /*font-size: 1.25rem;*/
+  /*font-size: 1.6rem;*/
+  font-size: 16px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+.clearFix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden
+}
+
+.floatL {
+  float: left
+}
+
+.floatR {
+  float: right
+}
+.clear_fix {
+  clear: both;
+}
+
+.am-container {
+  padding: 0;
+  width: 1050px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+.am-nav {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  /*float: left;*/
+}
+.am-nav > li {
+  position: relative;
+  display: block;
+}
+.am-nav-pills > li {
+  float: left;
+}
+.am-topbar {
+  height: 120px;
+  background-color: #f7f7f5;
+  /*border-bottom: none;*/
+  margin-bottom: 0;
+  position: relative;
+  min-height: 50px;
+  /*margin-bottom: 1.6rem;*/
+  /*background: #f8f8f8;*/
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #ddd;
+  color: #666;
+}
+.am-topbar a {
+  color: #666;
+}
+.am-topbar-nav > li > a {
+  position: relative;
+  line-height: 118px;
+  padding: 0 20px;
+  font-weight: normal;
+  display: block;
+  border-radius: 0;
+}
+
+.nav_downline {
+  border-bottom: 2px solid #1f7438;
+  color: #1f7438 !important;
+}
+
+.am-topbar-nav > li > a:hover {
+  /*color: #1f7438;*/
+  border-bottom: 2px solid #1f7438;
+  color: #1f7438 !important;
+}
+/*.am-topbar-nav > li.am-active > a:hover {*/
+/*!*color: #1f7438;*!*/
+/*border-bottom: 2px solid #1f7438;*/
+/*color: #1f7438 !important;*/
+/*}*/
+
+.am-topbar-nav > li > a:after {
+  content: none;
+}
+
+.am-topbar-brand {
+  float: left;
+  text-indent: -9999px;
+  height: 120px;
+  width: 299px;
+  padding: 0 10px;
+  font-size: 1.8rem;
+  line-height: 50px;
+}
+.am-collapse{
+  float: left;
+  display: block !important;
+  height: auto !important;
+  padding: 0;
+  overflow: visible !important;
+}
+.am-topbar-brand a {
+  display: block;
+  line-height: 120px;
+  background: url(../images/logo.png) no-repeat center 39px;
+}
+
+footer {
+  background-color: #26743a;
+  height: 200px;
+  color: #fff;
+  line-height: 30px;
+}
+
+.am-footer-left {
+  float: left;
+  padding-top: 70px;
+}
+
+.am-footer-left-copy {
+  float: left;
+  padding-top: 70px;
+  font-weight: bold;
+  margin-left: 67px;
+}
+
+.am-container span {
+  display: block;
+  width: 2px;
+  height: 44px;
+  background: #fff;
+  float: left;
+  margin-top: -22px;
+  margin-left: 75px;
+}
+
+.am-footer-left01 {
+  float: left;
+}
+
+.am-footer-left01-copy {
+  float: left;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 32px;
+}
+
+.am-footer-left01-copy:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.am-footer-right {
+  float: right;
+  padding-top: 52px;
+}
+
+.am-footer-right01 {
+  float: right;
+}
+
+.footer-logo {
+}
+
+.detail, header, footer {
+  min-width: 1000px;
+}
+
+.detail {
+  max-width: 1920px;
+}
+
+/** {*/
+  /*font-family: "Gotham"*/
+/*}*/
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}

@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.spec {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.property table {
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid #d4f0dc;
+  line-height: 30px;
+  color: #5c5c5c;
+  font-size: 14px;
+  font-family: 'Gotham';
+}
+
+.property .one {
+  border-bottom: 1px solid #d4f0dc;
+  padding: 0;
+}
+
+.property .two {
+  border: none;
+}
+
+.property table tr td {
+  font-size: 14px;
+}
+
+.property table .th {
+  width: 160px;
+  text-align: left;
+  padding-left: 0px;
+  font-size: 20px;
+  color: #1f7438;
+  font-weight: bold;
+}
+
+.property table .thh {
+  width: 334px;
+  padding-left: 60px;
+  padding-right: 30px;
+  color: #1f7438;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.property table .one {
+  width: 200px;
+  padding-left: 30px;
+  color: #5c5c5c;
+  font-size: 20px;
+}
+
+.txx {
+  width: 824px;
+  height: 624px;
+  margin-left: 60px;
+}

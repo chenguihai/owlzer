@@ -1,0 +1,69 @@
+<div class="container_box">
+  <div class="clearFix searchBox">
+    <div class="fl input_box">
+      <label class="input_lable" for="dateId">Date</label>
+      <input class="dateinput dateicon select_input" id="dateId" type="text" placeholder="All" readonly>
+    </div>
+    <div class="fl input_box w340">
+      <label class="input_lable" for="cameraId">Camera</label>
+      <select class="select_input w236" name="camera" id="cameraId"></select>
+    </div>
+    <!--筛选-->
+    <div class="fl"><span id="searchBtn" class="searchBtn">Search</span></div>
+
+    <div class="fr"><span id="logoutBtn" class="searchBtn">Sign out</span></div>
+    <div class="fr userName">User Name : <span id="userName"></span></div>
+</div>
+  <div class="table_box">
+    <table class="w">
+      <tr class="bg_e5e9f7">
+        <th class="tc">Date</th>
+        <th class="cameraTh">Camera Name</th>
+        <th class="imageBox">Image</th>
+      </tr>
+      <tbody id="table_list">
+      </tbody>
+    </table>
+    <div class="tc noRecord">No Record</div>
+  </div>
+  <!--分页-->
+  <ul id="paginationId" class="carListFy margin_right_64">
+  </ul>
+</div>
+<!--弹框-->
+<div class="banMgrMask" id="checkBigImg">
+  <!--查看大图片图片显示-->
+  <div class="maskInnerBox bigImgMask">
+    <div class="popupBox">
+      <span class="closeIcon closeIconClass"></span>
+      <span id="prevBigImg" class="cPrevBigImg"></span>
+      <span id="nextBigImg" class="cNextBigImg"></span>
+      <div id="photoIndex" class="centerOpenNum"></div>
+      <div class="cBigBox">
+        <img id="bigPhoto" class="cBigImg" src="" alt="picture">
+      </div>
+      <!--AM 3:50:00 2018-05-07-->
+      <p class="mask_detail">Time : <span id="timeMaskId"></span></p>
+      <p class="mask_detail">Camera name : <span id="cameraMaskId"></span></p>
+      <div class="btn_box"><span id="downloadId" class="searchBtn">Download</span><span class="searchBtn closeIconClass">Cacel</span>
+      </div>
+      <!--<canvas id="canvasId" class="canvasBox"></canvas>-->
+    </div>
+  </div>
+</div>
+<!--退出登录-->
+<div class="banMgrMask" id="logoutId">
+  <div class="maskInnerBox">
+    <!--退出登录-->
+    <div class="maskHead">Sign out</div>
+    <div class="c_s_popup">
+      <div class="tc lh180">
+        Are you sure you want to logout?
+      </div>
+      <div class="tc">
+        <span id="confirmLogout" class="c_btn w78 c_btn_active">Confirm</span>
+      </div>
+    </div>
+    <i class="maskOff closeIconClass"></i>
+  </div>
+</div>

@@ -1,0 +1,393 @@
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.w{
+  width: 100%;
+}
+.clearFix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+.tc{
+  text-align: center;
+}
+.table_box{
+  min-height: 425px;
+}
+.table_box table {
+  border-top: 1px solid #b5b5b5;
+  border-left: 1px solid #b5b5b5;
+  border-spacing: 0;
+}
+.table_box td, .table_box th {
+  border-right: 1px solid #b5b5b5;
+  border-bottom: 1px solid #b5b5b5;
+  padding: 2px;
+}
+select {
+  /*border: solid 1px #000;*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*padding-right: 14px;*/
+  background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+
+}
+select::-ms-expand { display: none; }
+.searchBox{
+  margin: 30px auto;
+  width: 1120px;
+}
+
+.container_box{
+  width: 1120px;
+  margin: 0 auto;
+}
+.input_box{
+  width: 245px;
+  height: 32px;
+  position: relative;
+  margin-right: 30px;
+}
+
+.select_input{
+  line-height: 32px;
+  width: 164px;
+  border: 1px solid #b5b5b5;
+  height: 32px;
+  vertical-align: top;
+  padding-left: 5px;
+}
+.input_lable{
+  height: 32px;
+  line-height: 32px;
+  margin: 0 30px 0 0;
+}
+.input_arrow {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 10;
+  display: inline-block;
+  width: 21px;
+  height: 29px;
+  background: #fff url(../images/qamgr.png) no-repeat right -477px;
+}
+.select_ul{
+  display: block;
+  position: absolute;
+  left: 0;
+  height: auto;
+  max-height: 128px;
+  z-index: 20;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  width: 164px;
+  top: 32px;
+}
+.select_li{
+  height: 32px;
+  line-height: 32px;
+  padding-left: 5px;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.searchBtn {
+  /*width: 72px;*/
+  height: 32px;
+  line-height: 32px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0 15px;
+  color: #fefefe;
+  font-size: 16px;
+  background: #1f7438;
+  margin-left: 20px;
+}
+
+.table_box th{
+  height: 38px;
+  min-width: 71px;
+  /*text-align: center;*/
+}
+.table_box td {
+  min-width: 107px;
+  height: 54px;
+}
+.border_no_top {
+  border: 1px solid #b5b5b5;
+  border-top: none;
+}
+.showBigImg{
+  width: 138px;
+  height: 79px;
+  margin:  2px;
+}
+
+/*分页*/
+.carListFy {
+  margin: 10px auto 50px;
+  display: table
+}
+
+.carListFy > li {
+  display: table-cell;
+  vertical-align: middle
+}
+.carListPre {
+  height: 26px;
+  width: 26px;
+  border: 1px solid #dadada;
+  cursor: pointer;
+  background: url(../images/qamgr.png) no-repeat 10px -283px
+}
+.carListPreFirst {
+  background-position: 10px -263px;
+}
+.carListPage {
+  height: 26px;
+  min-width: 26px;
+  padding: 0 2px;
+  cursor: pointer;
+  border: 1px solid #dadada;
+  color: #27282A;
+  text-align: center;
+  line-height: 25px
+}
+.carListAfter {
+  height: 26px;
+  width: 26px;
+  border: 1px solid #dadada;
+  cursor: pointer;
+  background: url(../images/qamgr.png) no-repeat 10px -323px
+}
+.carListAfterLast {
+  background-position: 10px -303px;
+}
+.carListPageTo {
+  margin-left: 20px
+}
+
+.carListPageTo > span {
+  color: #686868;
+  padding-left: 10px
+}
+
+.carListPageTo > input {
+  border: 1px solid #dadada;
+  width: 40px;
+  line-height: 24px;
+  padding-left: 5px;
+  margin: 0 10px;
+}
+.carListSure {
+  color: #1f7438;
+  margin-left: 20px;
+  cursor: pointer
+}
+
+.margin_right_64 {
+  margin-right: 64px
+}
+
+.bluePage {
+  background: #1f7438;
+  color: #fff
+}
+.bg_e5e9f7 {
+  background: #e5e9f7;
+}
+
+/*弹框*/
+.banMgrMask {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+.maskInnerBox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto auto;
+  background: #fff;
+  border: 1px solid #dadada;
+  width: 450px;
+  height: auto;
+}
+.bigImgMask{
+  /*width: 768px;*/
+  width: 750px;
+}
+
+.maskHead {
+  height: 40px;
+  border-bottom: 1px solid #dadada;
+  line-height: 40px;
+  font-size: 16px;
+  padding-left: 15px;
+  color: #59636C;
+  background-color: #dae7f3;
+}
+
+.c_s_popup{
+  width: 448px;
+  height: 242px;
+  padding: 0 38px 30px 38px;
+}
+.lh180{
+  font-size: 16px;
+  line-height: 180px;
+  height: 180px;
+}
+
+.c_btn{
+  width: 78px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;;
+  border-radius: 5px;
+  /*width: 122px;*/
+  height: 32px;
+  line-height: 32px;
+  background: #dbdada;
+  color: #333;
+}
+.c_btn_active{
+  background: #1f7438;
+  color: #fff;
+  cursor: pointer;
+}
+.popupBox {
+  background: rgba(256, 256, 256, 1);
+  position: relative;
+}
+.popupBox:hover .cPrevBigImg,.popupBox:hover .cNextBigImg{
+  visibility: visible;
+}
+.closeIcon {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  /*border: 1px solid #cccccc;*/
+  top: 5px;
+  /*right: -24px;*/
+  right: 5px;
+  cursor: pointer;
+  background:#393A3C url(../images/spiritSmall.png) no-repeat 8px -952px;
+  /*background:#393A3C url(../images/delete.png) no-repeat center center;*/
+}
+.closeIcon:hover{
+  background-color: #1f7438;
+  /*background-position: -26px -396px;*/
+}
+.cPrevBigImg,.cNextBigImg{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 30;
+  cursor: pointer;
+  visibility: hidden;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.cPrevBigImg {
+  left: 0;
+  background: url(../images/left_white.png) no-repeat center;
+}
+
+.cNextBigImg {
+  right: 0;
+  background: url(../images/right_white.png) no-repeat center;
+}
+
+.cPrevBigImg:hover {
+  background: url(../images/left_blue.png) no-repeat center;
+}
+
+.cNextBigImg:hover {
+  background: url(../images/right_blue.png) no-repeat center;
+}
+.centerOpenNum {
+  line-height: 44px;
+  height: 44px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.cBigBox {
+  width: 100%;
+  height: 556px;
+  overflow-y: auto;
+  position: relative;
+}
+.cBigImg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.mask_detail{
+  padding-left: 20px;
+  line-height: 32px;
+}
+.btn_box{
+  margin: 10px auto 20px;
+}
+.w236{
+  width: 236px;
+}
+.w340{
+  width: 340px;
+}
+
+/*关闭弹框小图标*/
+.maskOff {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 39px;
+  background: url("../images/qamgr.png") no-repeat 15px -385px;
+  border-left: 1px solid #B9C0C8;
+}
+
+.maskOff:hover {
+  background-position: 15px -415px;
+}
+.userName{
+  height: 32px;
+  line-height: 32px;
+}
+.table_box .cameraTh{
+min-width: 115px;
+}
+.noRecord{
+  height: 492px;
+  font-size: 18px;
+  padding: 232px;
+}

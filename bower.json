@@ -1,0 +1,14 @@
+{
+  "name": "ddp-owlzer",
+  "description": "owlzer",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "2.1.4",
+    "mockjs": "^1.0.0"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "*"
+  },
+  "appPath": "app"
+}

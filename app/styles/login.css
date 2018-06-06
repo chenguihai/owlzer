@@ -1,0 +1,196 @@
+
+input,textarea{
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-user-modify:read-write-plaintext-only;
+}
+input:focus,textarea:focus{
+  outline: 0;
+}
+div[ui-view]{
+  height:100%;
+  background: #fff;
+  position: relative;
+  overflow: auto;
+}
+.yzCodeTip {
+  display: none;
+  background: url("../images/spiritSidebar.png") no-repeat 5px -317px;
+  position: absolute;
+  top: 16px;
+  left: 33px;
+  height: 16px;
+  font-size: 12px;
+  padding-left: 20px;
+  color: #f21616;
+}
+.login{
+  width:100%;
+  /*height:100%;*/
+  padding: 100px 0;
+  /*height: 768px;*/
+  height: auto;
+  /*background: url(../images/login/loginBack_big.jpg) no-repeat center center /100% 100%;*/
+  background: url(../images/OWL01.jpg)  no-repeat center center /100% 100%;
+  box-sizing: border-box;
+}
+/*#login{*/
+  /*display: block;*/
+/*}*/
+.loginContainer{
+  position: relative;
+  width: 387px;
+  /*height: 390px;*/
+  height: auto;
+  border-radius: 11px;
+  margin: auto auto;
+  background: #fff;
+  /*background: rgba(255,255,255,1) url(../images/login/login_title.png) no-repeat left top /388px 106px;*/
+  /*padding: 131px 0 25px 0;*/
+  padding: 40px 0 20px 0;
+  box-sizing: border-box;
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*top: 0;*/
+  /*transform: translateY(-50%);*/
+  /*bottom: 0;*/
+}
+.loginTitleWord{
+  position: absolute;
+  left:0;
+  right:0;
+  margin:0 auto;
+  top:23px;
+  width:180px;
+  height:60px;
+  background:url(../images/login/loginTitle_word.png) no-repeat 0 0 /180px 60px ;
+}
+.loginInner{
+  width:320px;
+  height:100%;
+  margin: 0 auto;
+}
+.loginInner>li{
+  box-sizing: border-box;
+  width:100%;
+  height:48px;
+  margin-bottom:15px;
+}
+.loginInner>li:last-child{
+  margin-bottom:0;
+}
+.loginPadd{
+  /*background:#68757E;
+  border-radius: 3px;
+  overflow: hidden;*/
+}
+.loginInner>li>input{
+  border:1px solid #dadada;
+  height:100%;
+  width:100%;
+  text-indent: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-user-modify:read-write-plaintext-only;
+}
+.loginInner>li>input::-webkit-input-placeholder{
+  color:#9198A0;
+}
+:-moz-placeholder {
+  color:#9198A0;
+}
+
+::-moz-placeholder {
+  color: #9198A0;
+}
+.loginInner>li>input:-ms-input-placeholder{
+  color:#9198A0;
+}
+.loginPadd>input{
+  width:100%;
+  height:100%;
+  background: #fff;
+  /*padding-left:63px;*/
+  padding-left:48px;
+}
+.loginRem{
+  margin-bottom: 0!important;
+  /*padding-left:5px;*/
+}
+.loginRemAct>em{
+  background: #1f7438 url(../images/login/duigou.png) no-repeat center center/12px 12px!important;
+}
+.loginRem>em{
+  display: inline-block;
+  width:15px;
+  height:15px;
+  background:#fff;
+  border:1px solid #ccc;
+  margin-top:9px;
+}
+.loginRem>span{
+  height: 15px;
+  font-size: 12px;
+  color: rgb(51,51,51);
+  margin-top: 8px;
+  float: right;
+  margin-right: 260px;
+}
+/*.loginYz{
+    border:1px solid #cecece;
+}*/
+.loginYz>input{
+  border:1px solid #cecece;
+  width:155px!important;
+  float:left;
+  text-align: center;
+}
+.loginYz>div{
+  border-radius: 3px;
+  width:131px;
+  height:100%;
+  float:right;
+  background: #fff;
+}
+.loginIn>input{
+  background:#1f7438;
+  color:#fff;
+}
+.loginBottom{
+  width:100%;
+  height:48px;
+  background: #000;
+  text-align: center;
+  line-height: 48px;
+  font-size: 14px;
+  color:#fff;
+  position: fixed;
+  left:0;
+  bottom:0;
+}
+.loginInner>li>input:focus{
+  outline: 0;
+}
+.loginActive {
+  border: 1px solid #f21616 !important;
+}
+.loginHint{
+ margin:15px 34px ;
+}
+/*二维码*/
+.QRCodeBox{
+margin: 0 34px;
+}
+.QRCodeLi{
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.QRCode{
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}

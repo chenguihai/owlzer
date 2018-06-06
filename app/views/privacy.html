@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Owlzer</title>
+  <link href="images/favicon.ico" rel="SHORTCUT ICON" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
+<style>
+@font-face {
+	font-family:'Gotham';font-weight:300;src:url("../fonts/Gotham-Light-0ea2a6e95d0bdba20a9502c62c131eeb.eot");src:url("images/fonts/Gotham-Light-0ea2a6e95d0bdba20a9502c62c131eeb.eot?#iefix") format('embedded-opentype'),url("images/fonts/Gotham-Light-999959dfbf09ebef3177fc72b803b717.woff") format('woff'),url("images/fonts/Gotham-Light-56ab3b42c80e9883a06fc73d5108449e.ttf") format('truetype'),url("images/fonts/Gotham-Light-b1e5eccfa5291b3459a1ce5b582c3ca9.svg#GothamLight") format('svg')
+}
+
+@font-face {
+	font-family:'Gotham';font-weight:400;src:url("../fonts//Gotham-Book-4d092e28e42c81b1bdebcd4010abe604.eot");src:url("images/fonts/Gotham-Book-4d092e28e42c81b1bdebcd4010abe604.eot?#iefix") format('embedded-opentype'),url("images/fonts/Gotham-Book-62d503d5b97d5609337d4b4ed789302a.woff") format('woff'),url("images/fonts/Gotham-Book-f8208691ced4c70ed930ac679ca283bd.ttf") format('truetype'),url("images/fonts/Gotham-Book-2984b9ffb738be4334db9e4fd3a7921f.svg#GothamBook") format('svg')
+}
+
+@font-face {
+	font-family:'Gotham';font-weight:500;src:url("images/fonts/Gotham-Medium-c0fb8cad2da798f8b27d0fe7336c0443.eot");src:url("images/fonts/Gotham-Medium-c0fb8cad2da798f8b27d0fe7336c0443.eot?#iefix") format('embedded-opentype'),url("images/fonts/Gotham-Medium-6709db65d2a7a2fe5dc803c68cb53b38.woff") format('woff'),url("images/fonts/Gotham-Medium-7096870c6c466162c6728fe35c6990a3.ttf") format('truetype'),url("images/fonts/Gotham-Medium-9560bad501344775ac5a19fed17cecad.svg#GothamMedium") format('svg')
+}
+
+@font-face {
+	font-family:'Gotham';font-weight:700;src:url("../fonts/Gotham-Bold-594f4d55fcf020aaaa4c040cc58b7ef7.eot");src:url("images/fonts/Gotham-Bold-594f4d55fcf020aaaa4c040cc58b7ef7.eot?#iefix") format('embedded-opentype'),url("images/fonts/Gotham-Bold-ef012e01b1d16f8bbb7d7d24b62c11e2.woff") format('woff'),url("images/fonts/Gotham-Bold-de5f691c2611560246ca3a582086b7c3.ttf") format('truetype'),url("images/fonts/Gotham-Bold-2fc767384e9a94ecb3e7cb93686b9077.svg#GothamBold") format('svg')
+}
+
+@font-face {
+	font-family:'Gotham';font-weight:800;src:url("../fonts/Gotham-Ultra-47e08737894486f61fbb1e4d9f2350a9.eot");src:url("images/fonts/Gotham-Ultra-47e08737894486f61fbb1e4d9f2350a9.eot?#iefix") format('embedded-opentype'),url("images/fonts/Gotham-Ultra-5fa75387fb02f8654ab75ee2b4f88581.woff") format('woff'),url("images/fonts/Gotham-Ultra-e5656a08edb3b900f18994c9a5cb2ca9.ttf") format('truetype'),url("images/fonts/Gotham-Ultra-dc185c2f7205f724a150be6d3edc15cb.svg#GothamUltra") format('svg')
+}
+
+body{
+	font-family: "Gotham","Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",Arial,sans-serif!important
+	font-size: 1.25rem;
+	margin:0 auto;
+	padding:0;
+}
+ul,li{ margin:0; padding:0;}
+.clear_fix{ clear:both;}
+.am-container{ padding:0;}
+h2{font-size: 2.25rem;}
+.am-g{margin:0 auto;
+	padding:0;}
+.am-with-topbar-fixed-top{padding-top:120px;}
+.am-topbar{ height:120px; background-color:#f7f7f5; border-bottom:none; margin-bottom:0px;}
+.am-topbar-nav>li>a{line-height: 118px; padding:0 20px; font-weight:normal;}
+.nav_downline{ border-bottom:2px solid #1f7438; color:#1f7438!important;}
+.am-topbar-nav>li.am-active>a:hover{color:#1f7438;}
+.am-topbar-nav>li>a:after{content:none;}
+.am-topbar-brand{text-indent:-9999px; height:120px; width:300px;}
+.am-topbar-brand a{ display:block; line-height:120px;background:url(images/logo.png) no-repeat center 39px;}
+.index1{ background:url(images/owlzer01.jpg) no-repeat center bottom; height:900px; background-size:100% 100%; margin-left:auto; margin-right:auto;}
+.index2{ background:url(images/owlzer02.jpg) no-repeat center bottom; height:813px; background-size:100% 100%; color:#fff; text-align:center; margin-left:auto; margin-right:auto;}
+.index2 h2{ padding-top:140px; padding-bottom:45px;}
+.index3{ background:url(images/owlzer03.jpg) no-repeat center bottom; height:900px; background-size:100% 100%; color:#fff; margin-left:auto; margin-right:auto;}
+.index4{ background:url(images/owlzer04.jpg) no-repeat center bottom; height:900px; background-size:100% 100%; color:#1f7438; text-align:center; margin-left:auto; margin-right:auto;}
+.index5{ background:url(images/owlzer05.jpg) no-repeat center bottom; height:1100px; background-size:100% 100%;color:#fff; text-align:center; margin-left:auto; margin-right:auto;}
+.index6{ background:url(images/owlzer06.jpg) no-repeat center bottom; height:700px; background-size:100% 100%;color:#1f7438; margin-left:auto; margin-right:auto;}
+.index7{ background:url(images/owlzer07.jpg) no-repeat center bottom; height:657px; background-size:100% 100%; color:#fff;}
+.index7 h2{ padding-top:220px; padding-bottom:45px;}
+footer{ background-color:#26743a; height:200px; color:#fff; line-height:30px;}
+.am-footer-left{ float:left; padding-top:70px;}
+.am-footer-left-copy{ float:left; padding-top:70px; font-weight:bold; margin-left:67px;}
+.am-container span{ display:block; width:2px; height:44px; background:#fff; float:left; margin-top:-22px; margin-left:30px;}
+.am-footer-left01{ float:left;}
+.am-footer-left01-copy{ float:left; font-weight:bold; text-decoration:none; color:#fff; margin-left:30px;}
+.am-footer-left01-copy:hover{ text-decoration:underline; color:#fff;}
+.am-footer-right{ float:right; padding-top:52px;}
+.am-footer-right01{ float:right;}
+.footer-logo{}
+.detail, header, footer{min-width:1000px;}
+.detail{ max-width:1920px;}
+
+body{ margin:0; padding:0;}
+*{ font-family:'Gotham';}
+.spec{ width:1120px; margin:0 auto;}
+.box_bg{ width:100%; height:100%; background:url(images/bg01.jpg) center; position:fixed; z-index:-1;}
+.property table{ display:block; padding:20px 0; border-bottom:1px solid #d4f0dc; line-height:30px; color:#ababab; font-size:14px; font-family:'Gotham';}
+.property .one{ border-bottom:1px solid #d4f0dc; padding:0;}
+.property .two{ border:none;}
+.property table tr td{ font-size:14px;}
+.property table .th{width:160px; text-align:left; padding-left:0px; font-size:20px; color:#1f7438; font-weight:bold;}
+.property table .thh{ width:334px; padding-left:60px; padding-right:30px;  color:#1f7438; font-size:16px; font-weight:bold;}
+.property table .one{ width:200px; padding-left:30px; color:#5c5c5c; font-size:20px;}
+.txx{ width:824px; height:624px; margin-left:60px;}
+
+.copyright{ width:1000px; margin:0 auto; padding-bottom:200px;}
+h1,h2,h3{ margin:0; padding:0; text-decoration:none; font-weight:normal;}
+.copyright span{ display:block; font-size:36px; font-weight:bold; color:#1f7438; padding-top:150px; padding-bottom:50px;}
+.copyright h1{ font-size:20px; line-height:26px; padding:20px 0; font-weight:bold; color:#5c5c5c;}
+.copyright h2{ font-size:16px; line-height:26px; padding:10px 0; color:#5c5c5c;}
+.copyright h3{ font-size:16px; line-height:26px; padding:6px 0; color:#5c5c5c;}
+
+</style>
+</head>
+<body>
+<div class="box_bg"></div>
+<!--<header class="am-topbar am-topbar-fixed-top">-->
+<header class="am-topbar">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="index.html">Owlzer</a>
+    </h1>
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li><a href="index.html">OWLZER Z1</a></li>
+        <li><a href="#">TECHNOLOGY</a></li>
+        <li><a href="#">APP</a></li>
+        <li><a href="views/spec.html">SPECS</a></li>
+        <li><a href="#">SUPPORT</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+<div class="copyright">
+	<span>Terms and Privacy</span>
+  <h3>We understand how important your privacy is to you and are fully committed to protecting it. Please do not submit
+    personal or private data to Owlzer before you have read, understood and agreed to this Privacy Policy ("this
+    Policy").</h3>
+  <h3>Personal data means any electronic or other information which alone or jointly with other information can be used
+    to identify a natural person or make him/her identifiable. This Statement explains how Owlzer processes your
+    personal data, but does not cover all processing scenarios as you will be informed in specific processing activity.
+    Therefore, before using a specific product or service, it is recommended that you read the privacy notice or
+    supplementary statement released by Owlzer for that product or service to understand how it processes your personal
+  data.<br/>
+  </h3>
+  <h3>This Statement applies to Owlzer products, including wildlife trail camera, mobile services and applications,
+    software, websites, and services that display or mention this Statement.<br/>
+  </h3>
+<h3>This Policy describes:</h3>
+  <h3>1. How Owlzer Collects and Uses Your Personal Data<br>
+    2.How Owlzer Uses Cookies and Similar Technologies<br>
+    3. How Owlzer Shares Your Personal Data<br>
+    4. How Owlzer Protects Your Personal Data;<br>
+    5. How You Can Manage Your Personal Data<br>
+    6. How Owlzer Protects Children's Personal Data<br>
+    7. Links to Third-Party Websites, Products, and Services<br>
+    8. International Transfers of Your Personal Data<br>
+    9. Updates to This Statement<br>
+    10. How to Contact Us
+  </h3>
+  <!--I-->
+  <h2><strong>I. How Owlzer Collects and Uses Your Personal Data</strong></h2>
+  <h3>A. Personal Data Collected by Owlzer</h3>
+  <h3>Before using Owlzer products or services, you may need to provide personal data. You do not have to provide your
+    personal data to Owlzer, but in some cases, the non-provision of certain personal data will cause the inability to
+  provide you with some related products or services.<br/>
+    </h3>
+  <h3>Owlzer will collect and use your personal data for the purposes stated in this Statement. Here are some examples of
+    personal data we may collect: </h3>
+<h3>1. Personal data that you provide to Owlzer</h3>
+  <h3>You need to register an Owlzer ID to enjoy certain functions or services. When you register an Owlzer ID or log in
+    with an Owlzer ID to mobile application, we will ask you to provide relevant personal data, such as your email
+    address or mobile number.</h3>
+  <h3>Owlzer may provide you with cloud storage services where you can sync and backup some of your pictures and
+    data.</h3>
+  <h3>Owlzer may provide you with cloud storage services where you can sync and backup some of your pictures and
+    data.</h3>
+  <h3>Some Owlzer service allow you to communicate and share information with others. When you use a Owlzer product to
+    share things with your family and friends, you may need to create an Owlzer ID that includes certain information
+    which will be made public, including a nickname and avatar. Owlzer will take appropriate and necessary measures to
+    ensure the security of the information that you provide. </h3>
+  <h3>2. Information that Owlzer collects in your use of services</h3>
+  <h3>Owlzer will collect data about your device and how you and your device exchange information with Owlzer products
+    and services. This type of information includes:</h3>
+  <h3>(1) Device and application information, such as the device name, device identification code (IMEI, ESN, MEID, and
+    SN), device activation time, hardware model, OS version, application version, software identification code, and
+    device and application settings (such as region, language, time zone, and font size).<br>
+    (2) Mobile network information, such as the public land mobile network (PLMN) provider ID and Internet Protocol (IP)
+    address.<br/>
+    (3) Log information. When you use Owlzer services or view Owlzer-provided content, Owlzer will automatically collect
+    and log some information, such as the time of access, access count, IP address, and information about incidents
+    (such as errors, crashes, restarts, and upgrades).<br/>
+    (4) Location information. Owlzer will collect, use, and process the approximate or precise location of your device
+    when you access some location-based services. Location information can be obtained based on the GPS, WLAN, and
+    service provider network ID. <br/>
+    (5) Information you store on Owlzer servers. For example, the photos camera uploads to the cloud will be stored on
+    Owlzer servers for pushing message to your mobile applications. We will not view the information you store on Owlzer
+    servers.
+  </h3>
+
+  <h3>3. Information from third-party sources</h3>
+  <h3>When permitted by law, Owlzer will collect information about you from public and commercial sources. Owlzer may
+    also obtain certain information from third-party social network services, such as the time when you use a social
+    network account to log in to Owlzer application.</h3>
+
+  <h3>4. Collection and use of non-identifiable data</h3>
+  <h3>Non-identifiable data refers to data that cannot be used to identify an individual. Examples of non-identifiable
+    data include statistics on website visits, application downloads, and product sales volume. Owlzer will collect
+    statistics information to understand how users use our products and services. By doing so, we can improve our
+    services to better meet your requirements.</h3>
+  <h3>We keep your personal data and non-identifiable data separate, and use each independently. Circumstances may arise
+    where Owlzer collects, uses, discloses, and transfers non-identifiable data for other purposes at our own
+    discretion.</h3>
+
+  <h3>B. How Owlzer Uses Your Personal Data</h3>
+  <h3>Owlzer may use your personal data for the following purposes:</h3>
+  <h3>
+    (1) Register and activate Owlzer products that you have purchased.<br/>
+    (2) Register a Owlzer ID so that you can enjoy functions and mobile services.<br/>
+    (3) Deliver, activate, or verify the products and services you have requested, or perform changes and provide
+    technical support and after-sales services for the foregoing products and services based on your requirements.<br/>
+    (4) Send you application updates and installation notifications.<br/>
+    (5) Send you information about products and services you might be interested in, invite you to Owlzer promotional
+    activities and market surveys, or send marketing information to you. If you do not want to receive such information,
+    you can opt out at any time.<br/>
+    (6) Carry out internal auditing, data analysis, and research; analyse business operation efficiency and measure
+    market shares; and improve Owlzer's products and services.<br/>
+    (7) Synchronise, share, and store the data you have uploaded or downloaded, as well as the data needed for the
+    upload and download operations.<br/>
+    (8) Process pursuant to laws and regulations, e.g. authority requests.<br/>
+    (9) Other purposes within specific services or with your consent.
+  </h3>
+  <!--II-->
+  <h2><strong>II. How Owlzer Uses Cookies and Similar Technologies</strong></h2>
+  <h3>A. Cookie</h3>
+  <h3>A cookie is a text file stored by a web server on a computer or mobile device, and the content of a cookie can be
+    retrieved and read only by the server that created the cookie. Cookies are unique to the browser or mobile
+    application you are using. The text in a cookie often consists of identifiers, site names, and some numbers and
+    characters.</h3>
+  <h3>Sometimes, Owlzer stores cookies on computers or mobile devices for the purpose of improving user experience,
+    including the following scenarios:</h3>
+  <h3>
+    (1) Technical cookies: Login and verification. When you use an Owlzer ID to log in to a website, the "session-based"
+    cookies ensure that your visit to this site functions as smoothly as possible. .<br>
+    (2) Personalisation cookies: Storage of your preferences and settings. A website can use cookies to save settings,
+    such as the language setting and font size on your computer or mobile device, items in your shopping cart, and other
+    browser preferences.<br>
+    (3) Statistical cookies. With cookies, Owlzer can collect information about your use of our websites and other
+    applications, either for a single visit (using a session cookie) or for repeated visits (using a persistent cookie).<br>
+    (4) Social Media Cookies. Social media cookies are linked to services provided by third parties, such as 'Like'
+    buttons and 'Share' buttons. The third party provides these services in return for recognising that you have visited
+    our websites.  </h3>
+  <h3>You can manage or delete cookies at your own preference. For details, visit <a href="http://aboutcookies.org/" target="_blank">AboutCookies.org</a>. You can clear all the
+    cookies stored on your computer, and most current web browsers provide the option of blocking cookies. However,
+    blocking cookies will require you to change your user settings every time you visit our website. Find out how to
+    manage cookie settings for your browser here: </h3>
+  <h3><a href="https://support.microsoft.com/zh-cn/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">Internet Explorer></a></h3>
+  <h3>
+    <a href="https://support.google.com/chrome/answer/95647?hl=en" target="_blank">Google Chrome>
+  </a></h3>
+  <h3><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer?redirectlocale=en-US&redirectslug=Cookies" target="_blank">Mozilla Firefox></a></h3>
+  <h3>
+    <a href="https://support.apple.com/kb/PH19214?locale=en_US&viewlocale=en_US" target="_blank">Safari>
+  </a></h3>
+  <h3><a href="http://www.opera.com/help/tutorials/security/privacy/" target="_blank">Opera></a> </h3>
+  <h3>If you clear cookies, you will need to change your settings the next time you visit Owlzer websites. Note that
+    some Owlzer services require the use of cookies. Disabling cookies may affect your use of some or all functions of
+    these services.</h3>
+  <!--todo-->
+  <h3>B. Web Beacons and Pixel Tags</h3>
+  <h3>In addition to cookies, Owlzer and some third parties may also use web beacons and pixel tags on websites. A web
+    beacon is usually an electronic graphic image embedded into a website or email to identify your device cookies when
+    you browse the website or email. Pixel tags allow Owlzer to send emails in a way that is readable to you and find
+    out whether an email is opened.</h3>
+  <h3>Owlzer and some third parties use these technologies for various purposes, including analysing service usage
+    (together with cookies) and providing more satisfactory content and advertisements to you. For example, when you
+    receive an email from Owlzer, it may contain a click-through URL which links to a Owlzer web page. If you click the
+    link, Owlzer will track your visit to help us learn about your preferences for products and services and improve our
+    customer service. You can unsubscribe from the mailing list of Owlzer at any time if you do not want to be tracked
+    in this manner.</h3>
+
+  <h3>C. Other Local Storage</h3>
+  <h3>Owlzer and some third parties may use other local storage technologies, for example, local shared objects (also
+    called "Flash cookies") and HTML5 local storage, in certain products and services. Similar to cookies, these
+    technologies store information on your device and can record some information about your activities and preferences.
+    However, these technologies may use different media from cookies. Therefore, you may not be able to control them
+    using standard browser tools and settings. For details about how to disable or delete information contained in Flash
+    cookies, click <a href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html" target="_blank">here</a>.</h3>
+
+  <h3>D. Do Not Track</h3>
+  <h3>Many web browsers provide a Do Not Track function that can release Do Not Track requests to websites. Currently,
+    major Internet standardisation organisations have not established policies to specify how websites should handle
+    these requests. If you enable Do Not Track in your browser, all Owlzer websites will respect your selection.</h3>
+  <!--III-->
+  <h2><strong>III. How Owlzer Shares Your Personal Data</strong></h2>
+  <h3>
+    (1) Sharing with consent: After obtaining your consent, Owlzer will share the information that you have authorised
+    with specified third parties or categories of third parties.<br/>
+  (2) Sharing pursuant to laws and regulations: Owlzer may share your information as required by laws and regulations,
+    for resolving legal disputes, or as required by administrative or judiciary authorities pursuant to law.<br/>
+  (3) Sharing with Owlzer affiliates: Your information may be shared within Owlzer's affiliates only for explicit, and
+    legitimate purposes, and the sharing is limited only to information required by services. For example, we verify the
+    global uniqueness of accounts before allowing them to be registered.<br/>
+</h3>
+  <h3> Owlzer will share your information when there is a reasonable requirement to do so, for example, to meet request of
+    applicable law, regulation, legal process or enforceable government.<br/>
+  </h3>
+  <h3>In scenarios 3, Owlzer will ensure that the lawfulness of this sharing and sign stringent non-disclosure
+    agreements (NDAs) and/or data processing clauses with the companies, organisations, and individuals with whom
+    personal data is shared, requiring them to comply with this Statement and take appropriate confidentiality and
+    security measures when processing personal data.</h3>
+  <!--IV-->
+  <h2><strong>IV. How Owlzer Protects Your Personal Data</strong></h2>
+  <h3>Owlzer attaches great importance to the security of your personal data and has adopted standard industry practices
+    to protect your personal data and prevent it from unauthorised access, disclosure, use, modification, damage, or
+    loss. To this end, Owlzer takes the following measures:</h3>
+  <h3>(1) We take reasonable and feasible measures to ensure that the personal data collected is minimal and relevant to
+    what is necessary in relation to the purposes for which they are processed. We retain your personal data for no
+    longer than is necessary for the purposes stated in this Statement and privacy notice of specific product or
+    service, unless extending the retention period is required or permitted by law.<br/>
+    (2) We use a range of technologies such as cryptographic technologies to ensure the confidentiality of data in
+    transmission. We implement trusted protection mechanisms to protect data and data storage servers from attacks.<br/>
+    (3) We deploy access control mechanisms to ensure that only authorised personnel can access your personal data. In
+    addition, we control the number of authorised personnel and implement hierarchical permission management on them
+    based on service requirements and personnel levels.<br/>
+    (4) We strictly select business partners and service providers and incorporate personal data protection requirements
+    into commercial contracts, audits, and appraisal activities.<br/>
+    (5) We hold security and privacy protection training courses, tests, and publicity activities to raise employees'
+    personal data protection awareness.<br/>
+  </h3>
+  <h3>Owlzer is committed to protecting your personal data. Nevertheless, no security measure is perfect and no product,
+    service, website, data transfer, computing system, or network connection is absolutely secure.</h3>
+  <h3>To cope with possible risks, such as personal data leakage, damage, and loss, Owlzer has developed several
+    mechanisms and control measures, clearly defined the rating standards of security incidents and vulnerabilities and
+    corresponding processing procedures. Owlzer has established a dedicated emergency response team to implement
+    security planning, loss reduction, analysis, locating, and remediation, and to perform tracking operations with
+    related departments based on security incident handling regulations and requirements.</h3>
+  <h3>If any personal data incident occurs, Owlzer will notify you, pursuant to relevant legal and regulatory
+    requirements, of the basic information about the security incident and its possible impact, measures that Owlzer has
+    taken or will take, suggestions about active defense and risk mitigation, and remedial measures. The notification
+    may take the form of an email, text message, push notification, etc. If it is difficult to notify data subjects one
+    by one, we will take appropriate and effective measures to release a Security Notice. In addition, we will also
+    report the handling status of personal data security incidents as required by supervisory authorities.</h3>
+  <!--V-->
+  <h2><strong>V. How You Can Manage Your Personal Data</strong></h2>
+  <h3>A. Access, rectification, deletion, data portability, restriction of processing, objection to processing.</h3>
+  <h3>Legislation in some countries and regions to which Owlzer provides products and services or from where Owlzer
+    processes personal data, provides that data subjects the rights request (hereinafter referred to as "requests") in
+    regards to the accessing, rectifying, deleting or erasure, porting, restricting, and objecting, the processing of
+    related personal data by Owlzer retains. In addition you will have the right to data portability.</h3>
+  <h3>1. Requesting modes and channels</h3>
+  <h3>Data subjects' requests must be submitted in accordance with Owlzer designated privacy channels. The requests are
+    valid even when the requester does not specify the laws on which the requests are based.</h3>
+  <h3>Data subjects' requests may be initiated through the official website of Owlzer or Owlzer app. If a data subject
+    initiates a request via a hotline, email, online customer service, service centre, or another channel, we will
+    instruct the data subject to officially raise the request through one of the aforementioned channels to facilitate
+    communication and feedback of progress and results. The dedicated request channels for data subjects are intended to
+    protect data subjects' lawful interests, ensure Owlzer's normal operation, and prevent the right to request from
+    being misused or fraudulently used.</h3>
+
+  <h3>2. Validity of requests</h3>
+  <h3>Most laws require data subjects to comply with specific requirements when they initiate requests. This Statement
+    requires data subjects to:</h3>
+  <h3>
+    (1) Submit requests through dedicated request channels provided by Owlzer (namely, the official website of Owlzer,
+    and Owlzer app).<br/>
+    (2) Provide sufficient information for Owlzer to verify their identities (to ensure those who initiate the requests
+    are the data subjects themselves or those authorised by them).<br/>
+    (3) Ensure that their requests are specific and feasible.
+    There are some circumstances, provided by laws and regulations, in which Owlzer may not have to comply with the
+    request in full or at all.<br/>
+  </h3>
+  <h3>B. Consent withdrawal</h3>
+  <h3>You can change the authorised personal data collection scope or withdraw your consent without affecting the
+    lawfulness of the processing activities based on the consent and prior to such withdraw.</h3>
+  <h3>Your rights can be exercised by deleting information, disabling related functions, or setting privacy options on
+    your Owlzer product. Owlzer will release the methods for withdrawing consent for specific products and services in
+    the privacy notice or supplementary statement of those products and services or upon request according to section A
+    above.</h3>
+  <h3>C. Deregistering a Owlzer ID</h3>
+  <h3>You can deregister your account in Owlzer ID-related products. After you deregister your account, we will stop
+    providing products and services, and delete your personal data unless otherwise stipulated by law. Your account
+    cannot be restored after deregistration. You need to register a new Owlzer ID if you want to use related Owlzer
+    products or services again. You can submit a deregistration application and complete the process in setting menu
+    after logging in to your Owlzer ID on related devices, applications or official website.</h3>
+  <!--VI-->
+  <h2><strong>VI. How Owlzer Protects Children's Personal Data</strong></h2>
+  <h3>Owlzer Products and Services are not directed to children under the age of 13. We do not knowingly collect
+    information from children under the age of 13 without obtaining parental consent.</h3>
+  <!--VII-->
+  <h2><strong>VII. Links to Third-Party Websites, Products, and Services</strong></h2>
+  <h3>Owlzer websites, application software, products, and services may contain links to third-party websites, products,
+    and services. Owlzer products and services may also use or provide products or services from third parties.</h3>
+  <h3>All links to third-party websites, products, and services are provided for users' convenience only. You need to
+    determine your interaction with such links on your own. Before submitting your personal data to third parties,
+    please read and refer to these third parties' privacy policies.</h3>
+  <!--VIII-->
+  <h2><strong>VIII. International Transfers of Your Personal Data</strong></h2>
+  <h3>Our products and services are delivered through resources and servers located in different places, to offer our
+    products and services, we may need to transfer your personal data among several countries. Nowadays, we use amazon EC2 server in the United States to provide services. Authorised Owlzer
+    personnel and third parties acting on our behalf may access, use and process personal data collected from you in a
+    country/region that is different from the country/region where you entered the personal data, which may have less
+    stringent data protection laws. When we transfer your personal data to other countries/regions, we will protect that
+    the personal data as described in this statement or as otherwise disclosed to you at the time the data is collected
+    (e.g. via privacy notice or supplementary statement of specific product or service).</h3>
+  <h3>Owlzer has implemented global privacy practices for processing personal data protected under various data
+    protection laws. Owlzer transfers personal data between the countries in which we operate in accordance with the
+    standards and conditions of applicable data protection laws, including standards and conditions related to security
+    and processing.</h3>
+  <h3>With respect to personal data coming from the EU or Switzerland, we comply with applicable legal requirements
+    providing adequate safeguards for the transfer of personal data to countries outside of the European Economic Area
+    ("EEA") or Switzerland. We use a variety of legal mechanisms, such as standard contractual clauses to implement the
+    cross-border transfer of your personal data; or implement security measures like anonymisation on the data before
+    the cross border data transfer.</h3>
+  <!--IX-->
+  <h2><strong>IX. Updates to This Statement</strong></h2>
+  <h3>Owlzer reserves the right to update this Statement at any time.</h3>
+  <h3>Should this Statement be revised from time to time, Owlzer will release the change notice via various channels,
+    for example, posting the latest version on our official website: http://www.owlzer.com.</h3>
+  <h3>"Major changes" in this Statement include but are not limited to:</h3>
+  <h3>
+    (1) Major changes in our service modes, for example, purposes of personal data processing, types of processed
+    personal data, and ways of using personal data<br/>
+    (2) Major changes in our ownership structure, organisational structure, etc., for example, ownership changes caused
+    by business adjustment, bankruptcy, or acquisition<br/>
+    (3) Changes in the main objects of personal data sharing, transfer, or disclosure<br/>
+    (4) Major changes in your rights regarding personal data processing and the ways in which you can enjoy those rights<br/>
+    (5) Changes of Owlzer departments, contacts, and complaint channels responsible for the security of personal data
+    processing<br/>
+    (6) High risks identified in personal data security impact assessment reports<br/>
+  </h3>
+  <!--X-->
+  <h2><strong>X. How to Contact Us</strong></h2>
+  <h3>We have set up a dedicated personal data protection department (or data protection officer). If you have any
+    questions, comments, or suggestions, please contact us by email: info@owlzer.com. Note: Due to differences in local laws and languages, the local versions of Owlzer Privacy Statement may be
+    different from this version. In the case of any conflicts, the local versions shall prevail.</h3>
+  <h3>Copyright ©2018 Owlzer. All rights reserved.</h3>
+</div>
+
+<footer class="footer">
+	<div class="am-container">
+    <div class="am-footer-left">E-MAIL:info@owlzer.com</div>
+    <div class="am-footer-left-copy">Copyright &copy; 2017 OWLZER All Rights Reserved.</div>
+    <div class="am-footer-right"><img src="images/flogo.png" class="footer-logo"></div>
+    <div class="clear_fix"></div>
+    <div class="am-footer-left01">TEL: (+86) 400-163-0062</div>
+    <span></span>
+    <a class="am-footer-left01-copy" href="privacy.html">Terms of Use</a>
+    <div class="am-footer-right01"><img src="images/flogo_linpa.png" class="footer-logo"></div>
+	</div>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script language="javascript">
+$(document).ready(function(){
+	var w = $(document.body).width();
+	if(w > 1920)
+	{
+		w = 1920
+	}
+	var bili = w / 1920;
+	for(i = 1; i <= 7; i ++)
+	{
+		$(".index" + i).height($(".index" + i).height() * bili);
+	}
+	
+	$(".index2 h2").css("padding-top", (bili * 140) + "px");
+	$(".index2 h2").css("padding-bottom", (bili * 45) + "px");
+	$(".index7 h2").css("padding-top", (bili * 220) + "px");
+	$(".index7 h2").css("padding-bottom", (bili * 45) + "px");
+	$(".index7 h2").css("padding-left", (bili * 180) + "px");
+	$(".index7 p").css("padding-left", (bili * 180) + "px");
+	$(".index3 h2").css("padding-top", (bili * 300) + "px");
+	$(".index3 h2").css("padding-bottom", (bili * 30) + "px");
+	$(".index3 h2").css("padding-left", (bili * 620) + "px");
+	$(".index3 p").css("padding-left", (bili * 620) + "px");
+	$(".index4 h2").css("padding-top", (bili * 115) + "px");
+	$(".index4 h2").css("padding-bottom", (bili * 15) + "px");
+	$(".index5 h2").css("padding-top", (bili * 140) + "px");
+	$(".index5 h2").css("padding-bottom", (bili * 80) + "px");
+	$(".index6 h2").css("padding-top", (bili * 60) + "px");
+	$(".index6 h2").css("padding-bottom", (bili * 50) + "px");
+	$(".index6 h2").css("padding-left", (bili * 260) + "px");
+	$(".index6 p").css("padding-left", (bili * 260) + "px");
+});
+	$(".am-nav a").mouseenter(function(){$(".am-nav a").removeClass("nav_downline");$(this).addClass("nav_downline")})
+			.mouseleave(function(){$(".am-nav a").removeClass("nav_downline").eq(3)})
+
+	
+</script>
+</body>
+</html>
